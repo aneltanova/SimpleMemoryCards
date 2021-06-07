@@ -1,0 +1,331 @@
+html{
+  width:100%;
+  height:100%;
+  backdrop-filter: blur(4px);
+}
+
+body{
+  font-family: Roboto, sans-serif;
+  width:100%;
+  height:100%;
+  overflow: hidden;
+  background-image: url("FlexBG.jpg"); 
+  background-size: 100%;
+  background-attachment: fixed;
+
+}
+
+
+
+h1{ 
+  opacity: .5 ;
+	font-size: 64px;
+  font-weight: 700;
+	line-height: 64px;
+  margin:  20px 20px 15px 1px; 
+  padding: 20px 25px 25px;
+	text-align: center;
+  text-transform: uppercase;
+  color: #ffffff; 
+  background-color: #000000;
+ }
+
+.container {
+  color: #0b161b; 
+  width: 700px;
+  height: 500px;
+  position: relative;
+  float: left;
+  margin: 3% auto;
+  margin-top: 10px;
+  margin-left: 20px;
+  background-color: rgb(240, 248, 255, 0.7);
+  border-radius: 5px;
+  padding: 5px;
+  overflow: hidden;
+  box-shadow: 7px 7px 10px rgba(0,0,0,0.5);
+}
+
+.cardcontainer{
+  position: relative;
+  float: left;
+  width: 400px;
+  height: 200px;
+  margin: 10px 150px 20px;
+}
+
+.card{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 1.5s ease;
+  box-shadow: 7px 7px 10px rgba(0,0,0,0.5);
+  border: 2px solid rgba(250, 54, 0, 0.712);
+  color: #212121; 
+  background-color: white;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 15px;
+} 
+
+.card:hover {
+  transform: rotateY(180deg);
+  cursor: pointer;
+}
+
+.front{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  color: #212121; 
+  background-color: white;
+}
+
+.back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  color: #212121; 
+  background-color: white;
+  transform: rotateY(180deg);
+}
+
+#front, #back{
+  justify-content: center;
+  align-items: center;
+  height: 7em;
+  display: flex;
+}
+
+#front{
+  font-weight: bold;
+}
+
+button{
+  background: linear-gradient(200deg, #1D2A38, rgb(57, 69, 82));
+  border: none;
+  color: white;
+  padding: 15px 28px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+button:active {
+  opacity: 0.5;
+}
+
+#activeCardButtons {
+  max-width: 430px;
+  margin-bottom: 50px;
+  margin-left: 150px;
+}
+
+
+#prev{
+  border-bottom-left-radius: 8px;
+}
+
+#next{
+  margin-left: 113px;
+  border-bottom-right-radius: 8px;
+}
+
+
+/*=============   ADD   ==============*/
+.containerform {
+  color: #0b161b; 
+  float: right;
+  width: 700px;
+  height: 500px;
+  position: relative;
+  margin: 3% auto;
+  margin-top: 10px;
+  margin-right: 25px;
+  background-color: rgb(240, 248, 255, 0.8);
+  border-radius: 5px;
+  padding: 5px;
+  overflow: hidden;
+  box-shadow: 7px 7px 10px rgba(0,0,0,0.5);
+}
+
+
+
+#p1 {
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #212121; 
+  text-align: center;
+  font-weight: 700;
+}
+
+
+#cardForm {
+  position: relative;
+  margin-left:  120px;
+  width: auto;
+  height: auto;
+}
+
+input[type=button] {
+  border: none;
+  padding: 16px 32px;
+  margin: 4px 2px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+}
+
+input[type=button]:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+input[type=button]:active {
+  opacity: 0.5;
+}
+
+#submit, #clearDeck{
+  position:relative;
+  width:180px;
+  display:block;
+  width: 310px;
+  margin-left: 70px;
+  background: linear-gradient(150deg, rgba(250, 54, 0, 0.712), #ff9659a9);
+  border-radius: 5px;
+  color: #212121;
+}
+
+#newTerm, #newDef{
+  position:relative;
+  width:300px;
+  height: 50px;
+  margin-top:15px;
+  margin-left: 70px;
+  display:block;
+  text-align: left;
+  padding-left: 10px;
+}
+
+
+.activator {
+  cursor:pointer;
+  bottom:10px;
+  margin-left: 44px;
+}
+
+.activator:hover{
+  opacity: 0.7;
+}
+
+.activator:active{
+  color: #455A64;
+}
+
+.importExport {
+  font-size: 15px;
+  position: absolute;
+  bottom: 50px;
+  left: -600px;
+  width: 500px;
+  height: 200px;
+  background-color:rgba(239, 240, 241);
+  box-shadow: 7px 7px 10px rgba(0,0,0,0.5);
+  color:#212121;
+  padding:0px;      
+  border:1px solid rgb(0, 0, 0); 
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius:10px;
+  -khtml-border-radius:10px;
+  z-index:100;  
+}
+
+#import {
+  position: relative;
+  float: left;
+  width: 50%;
+  height: 200px;
+  left: 0px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;  
+}
+
+#export {
+  position: relative;
+  color: #455A64;
+  float: right;
+  width: 50%;
+  height: 200px;
+  right: 0px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;         
+} 
+
+a.close {
+  position:relative;
+  float:right;
+  width:26px;
+  height:26px;
+  background:transparent url(https://microwavemansion.com/images/cancel.png) repeat top left;
+  margin-top:-26px;
+  margin-right:-26px;
+  cursor:pointer;
+}
+  
+#deckSubmit {
+  border-bottom-left-radius: 10px;
+  position: absolute;
+  bottom: 0px;
+  height: 60px;
+  width: 100%;
+}
+   
+#saveDeck {
+  border-bottom-right-radius: 10px;
+  position: absolute;
+  background: linear-gradient(200deg, rgb(57, 69, 82),  #1D2A38);
+  bottom: 0px;
+  height: 60px;   
+  width: 100%; 
+}
+
+#deckSubmit:hover, #saveDeck:hover {
+  border: 1px solid white;
+}
+
+#uploadDeck {
+  padding-left:5px;
+}
+
+
+.footer {
+  overflow: hidden;
+  background-color: rgb(36, 34, 34, 0.7);
+  position: fixed;
+  bottom: 0;
+  height: 40px;
+  left: 0;
+  width: 100%;
+  margin-bottom: 0px;
+  text-align: center;
+  color: aliceblue;
+  justify-content: center;
+  padding: 15px 0px 0px;
+  
+}
+
+#footlink{
+  color: aliceblue;
+  text-decoration: none;
+}
+#footlink:hover {
+  color: #ff9659a9;
+}

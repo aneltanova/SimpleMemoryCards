@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link rel="stylesheet" href="reg.css">      
+    <title> Registration </title>
+    <link rel="shortcut icon" href="icon.png" type="image/png">
+
+
+  </head>
+
+  <body> 
+
+
+        <div class = "maincontainer">
+            <div class="btnswitch">
+                <div id="btn2"></div>
+                <button  type = "button" class ="btn" onclick = "switchtologin()">Sign in</button>
+                <button type = "button" class ="btn" onclick = "switchtoregister()">Sign up</button>
+            </div>
+
+            <form id = "login" class = "input">
+                <input id = "usernamelog" type="text" class = "inputfield" placeholder="Username" required>
+                <input id = "passwordlog" type="text" class = "inputfield" placeholder="Password" required>
+                <input class="submit" type="button" value="Go" onClick="logIn()">              
+            </form>
+
+            <form id = "register" class = "input">
+                <input id = "usernamereg" type="text" class = "inputfield" placeholder="Username" required>
+                <input id = "passwordreg" type="text" class = "inputfield" placeholder="Password" required>
+                <input id = "passwordreg2" type="text" class = "inputfield" placeholder="Confirm password" required>
+                <input type="checkbox"  name="checkbox" class="check-box">
+                <label for="checkbox">You agree to our <a href="ReadMe.txt" style="color: rgb(74, 92, 110);">Terms & Conditions</a></label> 
+
+                <input class="submit"  type="button" value="GO" onClick="registerIn()" > 
+            </form>
+        </div>
+
+    <script src="reg.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </body>
+
+</html>
